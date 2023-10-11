@@ -31,7 +31,12 @@
                     </div>
                     <!-- simboli -->
                     <div>
-                         simboli
+                        <!-- simboli che saranno visibili solo dal desktop in poi -->
+                        <div>barre</div>
+                        <div>putno interrogativo</div>
+                        <div>puntini verticali</div>
+                        <!--  sará sempre visibile e al suo click apparirá un piccolo menú a tendina sotto  -->
+                        <div>simbolo della campanella</div>
                     </div>
                 </div>
             </div>
@@ -43,25 +48,57 @@
             <div>
                 <!-- nav bar in flex con 4 simboli, 3 in alto e 1 in basso -->
                 <div>
+                    <!-- parte sopra con 3 contenitori per i simboli, nel quale il simbolo sará sempre visibile mentre la parte della scritta che identifica il simbolo sará visibile solo da desktop -->
                     <div>
-                        <div>home</div>
-                        <div>stats</div>
-                        <div>signals</div>
+                        <!-- questo contenitore all'hover avrá uno sfondo grigio -->
+                        <div>
+                            <!-- simbolo -->
+                            <div>simbolo casa</div>
+                            <!-- scritta -->
+                            <div>home</div>
+                        </div>
+                        <!-- questo contenitore all'hover avrá uno sfondo grigio -->
+                        <div>
+                            <!-- simbolo -->
+                            <div>simbolo stats</div>
+                            <!-- scritta -->
+                            <div>stats</div>
+                        </div>
+                        <!-- questo contenitore all'hover avrá uno sfondo grigio -->
+                        <div>
+                            <!-- simbolo -->
+                            <div>simbolo segnale</div>
+                            <!-- scritta -->
+                            <div>signals</div>
+                        </div>
                     </div>
 
                     <div>
-                        <div>admin</div>
+                        <!-- questo contenitore all'hover avrá uno sfondo grigio -->
+                        <div>
+                            <!-- simbolo -->
+                            <div>simbolo rotella</div>
+                            <!-- scritta -->
+                            <div>admin</div>
+                        </div>
                     </div>
                 </div>
                 <!-- /div della nav bar -->
 
-                <!-- div di destra che conterrá la parte superiore per aggiungere uno studente e una con sotto il contenuto  e che avrá la scroll bar-->
+                <!-- div di destra che conterrá la parte superiore per aggiungere uno studente e una con sotto il contenuto , il tutto avrá la scroll bar-->
                 <div>
                     <!-- div che avrá la parte superiore -->
                     <div>
                         <!-- div interno che sará messo in flex con al suo interno 3 elementi, anche loro in flex -->
                         <div>
+                            <!-- parte iniziale che conterra la scritta e il bottone per aggiungere un nuovo studente -->
+                            <!-- questo sará il primo ma appena si passa a tablet sará l'ultimo  -->
+                            <div>
+                                <div>nuovo studente</div>
+                                <div>bottone che apre una form</div>
+                            </div>
                             <!-- parte delle scritte boolean ecc che conterrá due elementi in flex , uno sopra e uno sotto -->
+                            <!-- questo stará al centro e dopo diventerá il primo dal tablet in poi -->
                             <div>
                                 <!-- parte sopra -->
                                 <div>
@@ -77,32 +114,34 @@
                                 <div>
                                     <div>3 app</div>
                                     <div>>></div>
+                                    <!-- questo sará visibile solo in mobile, dopo scomparirá e appariranno le scritte sotto -->
+                                    <div>+</div>
+                                    <!-- scritte sotto visibili da tablet in poi -->
                                     <div>boolean mobile app</div>
                                     <div>boolean web app</div>
                                     <div>boolean blog app</div>
                                 </div>
                             </div>
-                            <!--parte centrale che conterré il numero di studenti online, con sopra la parte della scritta e solo il numero   -->
+                            <!--parte che conterré il numero di studenti online, con sopra la parte della scritta e solo il numero -->
+                            <!-- parte che diventerá centrale dal tablet in poi -->
                             <div>
                                 <div>Studenti online negli ultimi 30 minuti</div>
                                 <div>125</div>
-                            </div>
-                            <!-- parte di sinistra che conterra la scritta e il bottone per aggiungere un nuovo studente -->
-                            <div>
-                                <div>nuovo studente</div>
-                                <div>bottone che apre una form</div>
                             </div>
                         </div>
                     </div>
                     <!-- /div parte superiore -->
                     
-                    <!-- div parte inferiore che sará messo in flex e diviso in due colonne che a loro volta saranno messe in flex con al loro interno altri blocchi -->
+                    <!-- div parte inferiore che sará messo in flex e diviso in due parti che a loro volta saranno messe in flex con al loro interno altri blocchi -->
+                    <!-- tutti i blocchi avranno la larghezza massima possibile, essendo che in mobile si vede un blocco alla volta, perció saranno uno sotto l'altro , stessa cosa per tablet,mentre per desktop saranno uno a sinistra e l'altro a destra -->
                     <div>
                         <!-- parte di sinistra che conterrá due blocchi, una table nel primo e un faq nel secondo che se clicchi nella domanda appare sotto la risposta-->
                         <div>
                             <!-- table -->
+                            <!-- nella table da mobile si vedranno solo 3 punti della table, nome, stato e azioni, da tablet in poi si vedranno anche data inizio e roi -->
                             <div>table</div>
                             <!-- faq -->
+                            <!-- nel faq si potrá cliccare sulla domanda e apparirá la risposta sotto -->
                             <div>faq</div>
                         </div>
                         <!-- parte di destra che conterrá due blocchi , un todo con una checkbox e nel secondo un grafico come immagine  -->
