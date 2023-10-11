@@ -32,6 +32,10 @@ img{
     background-image: url(../img/sidebar-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: blue;
+    background-color: #051e34;
     height: calc(100vh - (var(--alt-header)));
+}
+/* classe per il blocco superiore del main */
+.sopra{
+    background-color: #1b72e8;
 }

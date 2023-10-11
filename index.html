@@ -56,7 +56,7 @@
                 <!-- nav bar in flex con 4 simboli, 3 in alto e 1 in basso -->
                 <div class="sinistra d-flex justify-content-between flex-column align-items-center">
                     <!-- parte sopra con 3 contenitori per i simboli, nel quale il simbolo sará sempre visibile mentre la parte della scritta che identifica il simbolo sará visibile solo da desktop -->
-                    <div class=" d-flex flex-column me-2 ms-2 gap-3 p-2">
+                    <div class=" d-flex flex-column gap-3 p-2">
                         <!-- questo contenitore all'hover avrá uno sfondo grigio -->
                         <div class="d-flex gap-3 text-white ">
                             <!-- simbolo casa -->
@@ -86,7 +86,7 @@
                         </div>
                     </div>
 
-                    <div class="d-flex me-2 ms-2 gap-3 p-2">
+                    <div class="d-flex gap-3 p-2">
                         <!-- questo contenitore all'hover avrá uno sfondo grigio -->
                         <div class="d-flex gap-3 text-white">
                             <!-- simbolo rotella -->
@@ -103,12 +103,12 @@
                 <!-- div di destra che conterrá la parte superiore per aggiungere uno studente e una con sotto il contenuto , il tutto avrá la scroll bar-->
                 <div class="destra">
                     <!-- div che avrá la parte superiore -->
-                    <div>
+                    <div class="sopra">
                         <!-- div interno che sará messo in flex con al suo interno 3 elementi, anche loro in flex -->
-                        <div>
+                        <div class="row ">
                             <!-- parte iniziale che conterra la scritta e il bottone per aggiungere un nuovo studente -->
                             <!-- questo sará il primo ma appena si passa a tablet sará l'ultimo  -->
-                            <div>
+                            <div class="col-12 col-md-4">
                                 <div>nuovo studente</div>
                                 <!-- bottone che apre una form -->
                                 <div>
@@ -117,7 +117,7 @@
                             </div>
                             <!-- parte delle scritte boolean ecc che conterrá due elementi in flex , uno sopra e uno sotto -->
                             <!-- questo stará al centro e dopo diventerá il primo dal tablet in poi -->
-                            <div>
+                            <div class="col-12 col-md-4">
                                 <!-- parte sopra -->
                                 <div>
                                     <div>
@@ -148,7 +148,7 @@
                             </div>
                             <!--parte che conterré il numero di studenti online, con sopra la parte della scritta e solo il numero -->
                             <!-- parte che diventerá centrale dal tablet in poi -->
-                            <div>
+                            <div class="col-12 col-md-4">
                                 <div>Studenti online negli ultimi 30 minuti</div>
                                 <div>125</div>
                             </div>
