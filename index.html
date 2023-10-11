@@ -52,48 +52,56 @@
         <!-- main che conterrá l'intera dashboard  -->
         <main class="main">
             <!-- div che sará diviso in due colonne, una per la barra nav di sinistra e una per il contenuto -->
-            <div>
+            <div class="d-flex">
                 <!-- nav bar in flex con 4 simboli, 3 in alto e 1 in basso -->
-                <div>
+                <div class="sinistra d-flex justify-content-between flex-column align-items-center">
                     <!-- parte sopra con 3 contenitori per i simboli, nel quale il simbolo sará sempre visibile mentre la parte della scritta che identifica il simbolo sará visibile solo da desktop -->
-                    <div>
+                    <div class=" d-flex flex-column me-2 ms-2 gap-3 p-2">
                         <!-- questo contenitore all'hover avrá uno sfondo grigio -->
-                        <div>
+                        <div class="d-flex gap-3 text-white ">
                             <!-- simbolo casa -->
                             <div><i class="fa-solid fa-house"></i></div>
                             <!-- scritta -->
-                            <div>home</div>
+                            <div class="d-none d-lg-block">
+                                home
+                            </div>
                         </div>
                         <!-- questo contenitore all'hover avrá uno sfondo grigio -->
-                        <div>
+                        <div class="d-flex gap-3 text-white">
                             <!-- simbolo stats -->
                             <div><i class="fa-solid fa-chart-simple"></i></div>
                             <!-- scritta -->
-                            <div>stats</div>
+                            <div class="d-none d-lg-block">
+                                stats
+                            </div>
                         </div>
                         <!-- questo contenitore all'hover avrá uno sfondo grigio -->
-                        <div>
+                        <div class="d-flex gap-3 text-white">
                             <!-- simbolo segnale -->
                             <div><i class="fa-solid fa-signal"></i></div>
                             <!-- scritta -->
-                            <div>signals</div>
+                            <div class="d-none d-lg-block" >
+                                signals
+                            </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="d-flex me-2 ms-2 gap-3 p-2">
                         <!-- questo contenitore all'hover avrá uno sfondo grigio -->
-                        <div>
+                        <div class="d-flex gap-3 text-white">
                             <!-- simbolo rotella -->
                             <div><i class="fa-solid fa-gear"></i></div>
                             <!-- scritta -->
-                            <div>admin</div>
+                            <div class="d-none d-lg-block">
+                                admin
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- /div della nav bar -->
 
                 <!-- div di destra che conterrá la parte superiore per aggiungere uno studente e una con sotto il contenuto , il tutto avrá la scroll bar-->
-                <div>
+                <div class="destra">
                     <!-- div che avrá la parte superiore -->
                     <div>
                         <!-- div interno che sará messo in flex con al suo interno 3 elementi, anche loro in flex -->
