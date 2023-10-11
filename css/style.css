@@ -1,0 +1,26 @@
+:root{
+    --alt-header:50px;
+}
+/* reset img */
+img{
+    max-width: 100%;
+}
+/* classe per l'header */
+.header{
+    /* debug */
+    background-color: white;
+    min-height: var(--alt-header);
+}
+/* classe per il main */
+.main{
+    /* debug */
+    padding-top: var(--alt-header);
+    background-color: red;
+}
+/* classe per il punto interrogativo */
+.punto-int{
+    /* debug */
+    height: 20px;
+    width: 20px;
+    aspect-ratio: 1;
+}

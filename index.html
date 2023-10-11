@@ -16,32 +16,32 @@
     </head>
     <body>
         <!-- header che sará messo in fixed  -->
-        <header>
+        <header class="header position-fixed top-0 start-0 end-0">
             <!-- questo div conterrá il logo , una barra per la ricerca e 4 simboli, tutti in flex che a seconda della dimensione dello schermo scompariranno -->
             <div>
                 <!-- div contenitore che sará messo in flex  -->
-                <div>
+                <div class="d-flex justify-content-between align-items-center">
                     <!-- logo -->
-                    <div>
+                    <div class="ms-2">
                         <img src="img/logo.svg" alt="">
                     </div>
                     <!-- barra ricerca -->
-                    <div>
+                    <div class="flex-grow-1 ms-3 mt-1 bg-primary p-2">
                          barra ricerca
                     </div>
                     <!-- simboli -->
-                    <div>
+                    <div class="d-flex justify-content-between align-items-center gap-4 ms-2 me-2">
                         <!-- simboli che saranno visibili solo dal desktop in poi -->
                         <!-- lista -->
-                        <div><i class="fa-solid fa-list"></i></div>
+                        <div class="text-secondary"><i class="fa-solid fa-list d-none d-lg-block"></i></div>
                         <!-- punto interrogativo -->
-                        <div>
+                        <div class="text-white bg-secondary rounded-circle punto-int d-lg-inline-flex justify-content-center align-items-center d-none ">
                             <i class="fa-solid fa-question"></i>
                         </div>
                         <!-- puntini verticali -->
-                        <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                        <div class="text-secondary d-none d-lg-block"><i class="fa-solid fa-ellipsis-vertical"></i></div>
                         <!-- simbolo della campanella che sará sempre visibile e al suo click apparirá un piccolo menú a tendina sotto  -->
-                        <div>
+                        <div class="text-warning">
                             <i class="fa-solid fa-bell"></i>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
         </header>
         <!-- header -->
         <!-- main che conterrá l'intera dashboard  -->
-        <main>
+        <main class="main">
             <!-- div che sará diviso in due colonne, una per la barra nav di sinistra e una per il contenuto -->
             <div>
                 <!-- nav bar in flex con 4 simboli, 3 in alto e 1 in basso -->
@@ -128,7 +128,7 @@
                                     <div><i class="fa-solid fa-angles-right"></i></div>
                                     <!-- questo sará visibile solo in mobile, dopo scomparirá e appariranno le scritte sotto -->
                                     <!-- questo qui sará stilizzato con uno sfondo piú scuro e arrotondato -->
-                                    <div> <i class="fa-solid fa-plus"></div>
+                                    <div>+</div>
                                     <!-- scritte sotto visibili da tablet in poi -->
                                     <!-- questo qui sará stilizzato con uno sfondo piú scuro e arrotondato -->
                                     <div>boolean mobile app</div>
