@@ -15,171 +15,200 @@
     
     </head>
     <body>
-        <!-- header che sará messo in fixed  -->
-        <header class="header position-fixed top-0 start-0 end-0">
-            <!-- questo div conterrá il logo , una barra per la ricerca e 4 simboli, tutti in flex che a seconda della dimensione dello schermo scompariranno -->
-            <div>
-                <!-- div contenitore che sará messo in flex  -->
-                <div class="d-flex justify-content-between align-items-center">
-                    <!-- logo -->
-                    <div class="ms-2">
-                        <img src="img/logo.svg" alt="">
-                    </div>
-                    <!-- barra ricerca -->
-                    <div class="flex-grow-1 ms-3 mt-1 bg-primary p-2">
-                         barra ricerca
-                    </div>
-                    <!-- simboli -->
-                    <div class="d-flex justify-content-between align-items-center gap-4 ms-2 me-2">
-                        <!-- simboli che saranno visibili solo dal desktop in poi -->
-                        <!-- lista -->
-                        <div class="text-secondary"><i class="fa-solid fa-list d-none d-lg-block"></i></div>
-                        <!-- punto interrogativo -->
-                        <div class="text-white bg-secondary rounded-circle punto-int d-lg-inline-flex justify-content-center align-items-center d-none ">
-                            <i class="fa-solid fa-question"></i>
+        <div class="wrapper">
+            <!-- header -->
+            <header class="header">
+                <!-- questo div conterrá il logo , una barra per la ricerca e 4 simboli, tutti in flex che a seconda della dimensione dello schermo scompariranno -->
+                <div>
+                    <!-- div contenitore che sará messo in flex  -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <!-- logo -->
+                        <div>
+                            <img class="ms-1 d-none d-lg-inline" src="img/logo.svg" alt="">
+                            <img class="ms-1 d-lg-none logo " src="img/mobile-logo.png" alt="">
                         </div>
-                        <!-- puntini verticali -->
-                        <div class="text-secondary d-none d-lg-block"><i class="fa-solid fa-ellipsis-vertical"></i></div>
-                        <!-- simbolo della campanella che sará sempre visibile e al suo click apparirá un piccolo menú a tendina sotto  -->
-                        <div class="text-warning">
-                            <i class="fa-solid fa-bell"></i>
+                        <!-- barra ricerca -->
+                        <div class="d-flex flex-grow-1 align-items-center searchbar mt-1 ms-2">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input class="searchbar-input " type="search" placeholder="Prova a cercare: Lezioni di Laravel">
                         </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- header -->
-        <!-- main che conterrá l'intera dashboard  -->
-        <main class="main">
-            <!-- div che sará diviso in due colonne, una per la barra nav di sinistra e una per il contenuto -->
-            <div class="d-flex">
-                <!-- nav bar in flex con 4 simboli, 3 in alto e 1 in basso -->
-                <div class="sinistra d-flex justify-content-between flex-column align-items-center">
-                    <!-- parte sopra con 3 contenitori per i simboli, nel quale il simbolo sará sempre visibile mentre la parte della scritta che identifica il simbolo sará visibile solo da desktop -->
-                    <div class=" d-flex flex-column gap-3 p-2">
-                        <!-- questo contenitore all'hover avrá uno sfondo grigio -->
-                        <div class="d-flex gap-3 text-white ">
-                            <!-- simbolo casa -->
-                            <div><i class="fa-solid fa-house"></i></div>
-                            <!-- scritta -->
-                            <div class="d-none d-lg-block">
-                                home
+                        <!-- simboli -->
+                        <div class="d-flex justify-content-between align-items-center gap-4 ms-2 me-2">
+                            <!-- simboli che saranno visibili solo dal desktop in poi -->
+                            <!-- lista -->
+                            <div class="text-secondary"><i class="fa-solid fa-list d-none d-lg-block"></i></div>
+                            <!-- punto interrogativo -->
+                            <div class="text-white bg-secondary rounded-circle punto-int d-lg-inline-flex justify-content-center align-items-center d-none ">
+                                <i class="fa-solid fa-question"></i>
                             </div>
-                        </div>
-                        <!-- questo contenitore all'hover avrá uno sfondo grigio -->
-                        <div class="d-flex gap-3 text-white">
-                            <!-- simbolo stats -->
-                            <div><i class="fa-solid fa-chart-simple"></i></div>
-                            <!-- scritta -->
-                            <div class="d-none d-lg-block">
-                                stats
-                            </div>
-                        </div>
-                        <!-- questo contenitore all'hover avrá uno sfondo grigio -->
-                        <div class="d-flex gap-3 text-white">
-                            <!-- simbolo segnale -->
-                            <div><i class="fa-solid fa-signal"></i></div>
-                            <!-- scritta -->
-                            <div class="d-none d-lg-block" >
-                                signals
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="d-flex gap-3 p-2">
-                        <!-- questo contenitore all'hover avrá uno sfondo grigio -->
-                        <div class="d-flex gap-3 text-white">
-                            <!-- simbolo rotella -->
-                            <div><i class="fa-solid fa-gear"></i></div>
-                            <!-- scritta -->
-                            <div class="d-none d-lg-block">
-                                admin
+                            <!-- puntini verticali -->
+                            <div class="text-secondary d-none d-lg-block"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                            <!-- simbolo della campanella che sará sempre visibile e al suo click apparirá un piccolo menú a tendina sotto  -->
+                            <div class="text-warning">
+                                <i class="fa-solid fa-bell"></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- /div della nav bar -->
-
-                <!-- div di destra che conterrá la parte superiore per aggiungere uno studente e una con sotto il contenuto , il tutto avrá la scroll bar-->
-                <div class="destra">
-                    <!-- div che avrá la parte superiore -->
-                    <div class="sopra">
-                        <!-- div interno che sará messo in flex con al suo interno 3 elementi, anche loro in flex -->
-                        <div class="row ">
-                            <!-- parte iniziale che conterra la scritta e il bottone per aggiungere un nuovo studente -->
-                            <!-- questo sará il primo ma appena si passa a tablet sará l'ultimo  -->
-                            <div class="col-12 col-md-4">
-                                <div>nuovo studente</div>
-                                <!-- bottone che apre una form -->
-                                <div>
-                                    <i class="fa-solid fa-plus"></i>
+            </header>
+            <!-- header -->
+            
+            <main class="d-flex ">
+                <!-- sidebar -->
+                <nav class="sidebar">
+                    <!-- nav bar in flex con 4 simboli, 3 in alto e 1 in basso -->
+                    <div class="sinistra d-flex justify-content-between flex-column align-items-center">
+                        <!-- parte sopra con 3 contenitori per i simboli, nel quale il simbolo sará sempre visibile mentre la parte della scritta che identifica il simbolo sará visibile solo da desktop -->
+                        <div class=" d-flex flex-column gap-3 p-2">
+                            <!-- questo contenitore all'hover avrá uno sfondo grigio -->
+                            <div class="d-flex gap-3 text-white ">
+                                <!-- simbolo casa -->
+                                <div><i class="fa-solid fa-house"></i></div>
+                                <!-- scritta -->
+                                <div class="d-none d-lg-block">
+                                    home
                                 </div>
                             </div>
-                            <!-- parte delle scritte boolean ecc che conterrá due elementi in flex , uno sopra e uno sotto -->
-                            <!-- questo stará al centro e dopo diventerá il primo dal tablet in poi -->
-                            <div class="col-12 col-md-4">
-                                <!-- parte sopra -->
-                                <div>
-                                    <div>
-                                        boolean
-                                    </div>
+                            <!-- questo contenitore all'hover avrá uno sfondo grigio -->
+                            <div class="d-flex gap-3 text-white">
+                                <!-- simbolo stats -->
+                                <div><i class="fa-solid fa-chart-simple"></i></div>
+                                <!-- scritta -->
+                                <div class="d-none d-lg-block">
+                                    stats
+                                </div>
+                            </div>
+                            <!-- questo contenitore all'hover avrá uno sfondo grigio -->
+                            <div class="d-flex gap-3 text-white">
+                                <!-- simbolo segnale -->
+                                <div><i class="fa-solid fa-signal"></i></div>
+                                <!-- scritta -->
+                                <div class="d-none d-lg-block" >
+                                    signals
+                                </div>
+                            </div>
+                        </div>
 
-                                    <!-- questo qui sará stilizzato con uno sfondo piú scuro e arrotondato -->
-                                    <div>
-                                        piano blaze
+                        <div class="d-flex gap-3 p-2">
+                            <!-- questo contenitore all'hover avrá uno sfondo grigio -->
+                            <div class="d-flex gap-3 text-white">
+                                <!-- simbolo rotella -->
+                                <div><i class="fa-solid fa-gear"></i></div>
+                                <!-- scritta -->
+                                <div class="d-none d-lg-block">
+                                    admin
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /div della nav bar -->
+                </nav>
+                <!-- /sidebar -->
+
+                <!-- content -->
+                <div class="content">
+                    <!-- breadcumb -->
+                    <div class="breadcumb">
+                        <div class="container-fluid">
+                            <div class="row align-items-center p-2">
+                                <!-- parte iniziale che conterra la scritta e il bottone per aggiungere un nuovo studente -->
+                                <!-- questo sará il primo ma appena si passa a tablet sará l'ultimo  -->
+                                <div class="col-12 col-md-4 col-lg-2 d-flex text-white align-items-start order-md-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div>Nuovo Studente</div>
+                                        <!-- bottone che apre una form -->
+                                        <div class="plus d-flex align-items-center justify-content-center">
+                                            <a class="text-white" href=""><i class="fa-solid fa-plus"></i></a>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- parte sotto -->
-                                <div>
-                                    <!-- questo qui sará stilizzato con uno sfondo piú scuro e arrotondato -->
-                                    <div>3 app</div>
-                                    <div><i class="fa-solid fa-angles-right"></i></div>
-                                    <!-- questo sará visibile solo in mobile, dopo scomparirá e appariranno le scritte sotto -->
-                                    <!-- questo qui sará stilizzato con uno sfondo piú scuro e arrotondato -->
-                                    <div>+</div>
-                                    <!-- scritte sotto visibili da tablet in poi -->
-                                    <!-- questo qui sará stilizzato con uno sfondo piú scuro e arrotondato -->
-                                    <div>boolean mobile app</div>
-                                    <!-- questo qui sará stilizzato con uno sfondo piú scuro e arrotondato -->
-                                    <div>boolean web app</div>
-                                    <!-- questo qui sará stilizzato con uno sfondo piú scuro e arrotondato -->
-                                    <div>boolean blog app</div>
+                                <!-- parte delle scritte boolean ecc che conterrá due elementi in flex , uno sopra e uno sotto -->
+                                <!-- questo stará al centro e dopo diventerá il primo dal tablet in poi -->
+                                <div class="col-12 col-md-4 col-lg-6 order-md-1">
+                                    <!-- parte sopra -->
+                                    <div class="d-flex text-white align-items-center ">
+                                        <div class="me-1">
+                                            <h3>Boolean</h3>
+                                        </div>
+
+                                        <!-- questo qui sará stilizzato con uno sfondo piú scuro e arrotondato -->
+                                        <div >
+                                            <a class="text-white link-blu " href="">Piano Blaze</a>
+                                        </div>
+                                    </div>
+                                    <!-- parte sotto -->
+                                    <div class="d-flex gap-1">
+                                        <!-- questo qui sará stilizzato con uno sfondo piú scuro e arrotondato -->
+                                        <div>
+                                            <a class="text-white link-blu " href="">3 app</a>
+                                        </div>
+                                        <!-- freccette -->
+                                        <div class="text-white">
+                                            <i class="fa-solid fa-angles-right"></i>
+                                        </div>
+                                        <!-- questo sará visibile solo in mobile, dopo scomparirá e appariranno le scritte sotto -->
+                                        <!-- questo qui sará stilizzato con uno sfondo piú scuro e arrotondato -->
+                                        <div class="d-lg-none">
+                                            <a class="text-white link-blu " href=""><i class="fa-solid fa-plus"></i></a>
+                                        </div>
+                                        <!-- scritte sotto visibili da tablet in poi -->
+                                        <!-- questo qui sará stilizzato con uno sfondo piú scuro e arrotondato -->
+                                        <div class="d-none d-lg-block">
+                                            <a class="text-white link-blu " href="">Boolean mobile app</a>
+                                        </div>
+                                        <!-- questo qui sará stilizzato con uno sfondo piú scuro e arrotondato -->
+                                        <div class="d-none d-lg-block">
+                                            <a class="text-white link-blu " href="">Boolean web app</a>
+                                        </div>
+                                        <!-- questo qui sará stilizzato con uno sfondo piú scuro e arrotondato -->
+                                        <div class="d-none d-lg-block">
+                                            <a class="text-white link-blu " href="">Boolean blog app</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--parte che conterré il numero di studenti online, con sopra la parte della scritta e solo il numero -->
+                                <!-- parte che diventerá centrale dal tablet in poi -->
+                                <div class="col-12 col-md-4 col-lg-4 text-white order-md-2 pt-1">
+                                    <div class="d-flex flex-column ">
+                                        <div>
+                                            <p>Studenti online negli ultimi 30 minuti</p>
+                                        </div>
+                                        <div>
+                                            <h3>125</h3>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <!--parte che conterré il numero di studenti online, con sopra la parte della scritta e solo il numero -->
-                            <!-- parte che diventerá centrale dal tablet in poi -->
-                            <div class="col-12 col-md-4">
-                                <div>Studenti online negli ultimi 30 minuti</div>
-                                <div>125</div>
+                        </div>
+                    </div>
+                    <!-- /breadcumb -->
+
+                    <!-- dashboard content -->
+                    <div class="container-fluid pt-1">
+                        <div class="row">
+                            <div class="col-12 col-lg-8">
+                                <div class="card">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil quibusdam similique blanditiis, ipsum autem fugit natus, mollitia recusandae sed a laborum eveniet veritatis, est id ad nemo. Laboriosam, molestias?
+                                </div>
+                                <div class="card">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil quibusdam similique blanditiis, ipsum autem fugit natus, mollitia recusandae sed a laborum eveniet veritatis, est id ad nemo. Laboriosam, molestias?
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="card">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe sapiente omnis, aperiam necessitatibus at libero dolor neque incidunt autem eius nobis natus facilis earum excepturi a praesentium? Porro, aspernatur laborum.
+                                </div>
+                                <div class="card">
+                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil quibusdam similique blanditiis, ipsum autem fugit natus, mollitia recusandae sed a laborum eveniet veritatis, est id ad nemo. Laboriosam, molestias?
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- /div parte superiore -->
-                    
-                    <!-- div parte inferiore che sará messo in flex e diviso in due parti che a loro volta saranno messe in flex con al loro interno altri blocchi -->
-                    <!-- tutti i blocchi avranno la larghezza massima possibile, essendo che in mobile si vede un blocco alla volta, perció saranno uno sotto l'altro , stessa cosa per tablet,mentre per desktop saranno uno a sinistra e l'altro a destra -->
-                    <div>
-                        <!-- parte di sinistra che conterrá due blocchi, una table nel primo e un faq nel secondo che se clicchi nella domanda appare sotto la risposta-->
-                        <div>
-                            <!-- table -->
-                            <!-- nella table da mobile si vedranno solo 3 punti della table, nome, stato e azioni, da tablet in poi si vedranno anche data inizio e roi -->
-                            <div>table</div>
-                            <!-- faq -->
-                            <!-- nel faq si potrá cliccare sulla domanda e apparirá la risposta sotto -->
-                            <div>faq</div>
-                        </div>
-                        <!-- parte di destra che conterrá due blocchi , un todo con una checkbox e nel secondo un grafico come immagine  -->
-                        <div>
-                            <!-- todo checkbox -->
-                            <div>todo</div>
-                            <!-- grafico -->
-                            <div>grafico</div>
-                        </div>
-                    </div>
+                    <!-- /dashboard content -->
                 </div>
-                <!-- /div parte centrale -->
-            </div>
-            <!-- /div diviso in due, nav bar e parte centrale -->
-        </main>
+                <!-- /content -->
+            </main>
+        </div>
+        <!-- /wrapper -->
     </body>
 </html>

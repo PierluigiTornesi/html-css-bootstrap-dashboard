@@ -1,13 +1,26 @@
 :root{
     --alt-header:50px;
+    --lar-sidebar:90px;
+    --color-searchbar:#e5e5e5;
+}
+/* media query per modificare la larghezza della sidebar */
+@media screen and (min-width: 992px) {
+    :root{
+        --lar-sidebar: 120px;
+    }
 }
 /* reset img */
 img{
     max-width: 100%;
 }
-.body{
-    height: 100vh;
+/* classe per il wrapper */
+.wrapper{
     width: 100%;
+    height: 100vh;
+}
+/* classe per il main */
+main{
+    height:calc(100vh - var(--alt-header));
 }
 /* classe per l'header */
 .header{
@@ -15,10 +28,25 @@ img{
     background-color: white;
     min-height: var(--alt-header);
 }
-/* classe per il main */
-.main{
-    /* debug */
-    padding-top: var(--alt-header);
+/* classe per il logo da mobile */
+.logo{
+    height: calc(var(--alt-header) - 10px);
+    width: 100%;
+}
+/* classe per la barra di ricerca */
+.searchbar{
+    background-color: var(--color-searchbar);
+    padding:  0.5rem 0.5rem;
+    border-radius: 4px;
+}
+.searchbar input{
+    width: 100%;
+}
+/* classe per l'input della barra */
+.searchbar-input{
+    background-color: var(--color-searchbar);
+    border: 0;
+    padding-left: 0.5rem;
 }
 /* classe per il punto interrogativo */
 .punto-int{
@@ -27,6 +55,11 @@ img{
     width: 20px;
     aspect-ratio: 1;
 }
+/* classe per la sidebar */
+.sidebar{
+    width: var(--lar-sidebar);
+    overflow-y: hidden;
+}
 /* classe per la nav bar di sinistra */
 .sinistra{
     background-image: url(../img/sidebar-bg.png);
@@ -34,8 +67,32 @@ img{
     background-size: cover;
     background-color: #051e34;
     height: calc(100vh - (var(--alt-header)));
+    width: var(--lar-sidebar);
+}
+/* classe per il contenuto */
+.content{
+    width: calc(100% - var(--lar-sidebar));
+    overflow-y: auto;
+    background-color: cyan;
 }
 /* classe per il blocco superiore del main */
-.sopra{
+.breadcumb{
     background-color: #1b72e8;
 }
+/* classe per il bottone con il + per aggiungere un nuovo studente */
+.plus{
+    height: 40px;
+    width: 40px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+/* classe per tutti i link blu dentro il breadcumb */
+.link-blu{
+    background-color: #165bba;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.8rem;
+}
+
+
