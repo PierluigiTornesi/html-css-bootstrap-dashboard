@@ -133,3 +133,7 @@ main{
 .blocco-domanda:active .simbolo-risposta{
     rotate: 180deg;
 }
+/* classe per l'hover dei button nella sidebar */
+.sidebar-button:hover{
+    background-color: rgba(177, 177, 177, 0.647)
+}

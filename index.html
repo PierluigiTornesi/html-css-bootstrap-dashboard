@@ -19,7 +19,7 @@
             <!-- header -->
             <header class="header">
                 <!-- questo div conterrá il logo , una barra per la ricerca e 4 simboli, tutti in flex che a seconda della dimensione dello schermo scompariranno -->
-                <div>
+                <div class="position-relative">
                     <!-- div contenitore che sará messo in flex  -->
                     <div class="d-flex justify-content-between align-items-center">
                         <!-- logo -->
@@ -47,9 +47,16 @@
                                 <a class="text-decoration-none text-secondary" href=""><i class="fa-solid fa-ellipsis-vertical"></i></a>
                             </div>
                             <!-- simbolo della campanella che sará sempre visibile e al suo click apparirá un piccolo menú a tendina sotto  -->
-                            <div>
-                                <a class="text-warning" href=""><i class="fa-solid fa-bell"></i></a>
-                            </div>
+                            <div class="dropdown">
+                                <button class="btn border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a class="text-warning" href=""><i class="fa-solid fa-bell"></i></a>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><button class="dropdown-item" type="button">Profilo</button></li>
+                                  <li><button class="dropdown-item" type="button">Fatturazione</button></li>
+                                  <li><button class="dropdown-item" type="button">Logout</button></li>
+                                </ul>
+                              </div>
                         </div>
                     </div>
                 </div>
@@ -64,42 +71,42 @@
                         <!-- parte sopra con 3 contenitori per i simboli, nel quale il simbolo sará sempre visibile mentre la parte della scritta che identifica il simbolo sará visibile solo da desktop -->
                         <div class=" d-flex flex-column gap-3 p-2">
                             <!-- questo contenitore all'hover avrá uno sfondo grigio -->
-                            <div class="d-flex gap-3 text-white ">
+                            <div class="d-flex gap-3 text-white  sidebar-button p-2 ">
                                 <!-- simbolo casa -->
                                 <div><i class="fa-solid fa-house"></i></div>
                                 <!-- scritta -->
                                 <div class="d-none d-lg-block">
-                                    home
+                                    <a class="text-decoration-none text-white " href="">Home</a>
                                 </div>
                             </div>
                             <!-- questo contenitore all'hover avrá uno sfondo grigio -->
-                            <div class="d-flex gap-3 text-white">
+                            <div class="d-flex gap-3 text-white sidebar-button p-2">
                                 <!-- simbolo stats -->
                                 <div><i class="fa-solid fa-chart-simple"></i></div>
                                 <!-- scritta -->
                                 <div class="d-none d-lg-block">
-                                    stats
+                                    <a class="text-decoration-none text-white " href="">Stats</a>
                                 </div>
                             </div>
                             <!-- questo contenitore all'hover avrá uno sfondo grigio -->
-                            <div class="d-flex gap-3 text-white">
+                            <div class="d-flex gap-3 text-white sidebar-button p-2">
                                 <!-- simbolo segnale -->
                                 <div><i class="fa-solid fa-signal"></i></div>
                                 <!-- scritta -->
                                 <div class="d-none d-lg-block" >
-                                    signals
+                                    <a class="text-decoration-none text-white " href="">Signals</a>
                                 </div>
                             </div>
                         </div>
 
                         <div class="d-flex gap-3 p-2">
                             <!-- questo contenitore all'hover avrá uno sfondo grigio -->
-                            <div class="d-flex gap-3 text-white">
+                            <div class="d-flex gap-3 text-white sidebar-button ">
                                 <!-- simbolo rotella -->
                                 <div><i class="fa-solid fa-gear"></i></div>
                                 <!-- scritta -->
                                 <div class="d-none d-lg-block">
-                                    admin
+                                    <a class="text-decoration-none text-white" href="">Admin</a>
                                 </div>
                             </div>
                         </div>
