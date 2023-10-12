@@ -94,5 +94,23 @@ main{
     padding: 0.2rem 0.4rem;
     font-size: 0.8rem;
 }
-
-
+/* classe per il titolo della card */
+.titolo{
+    padding: 1rem;
+    border-bottom: 1px solid lightgray;
+}
+/* classe per lo stato della classe nella table */
+.state{
+    border-radius: 20px;
+    padding: 0.2rem 0.4rem;
+}
+/* classe per l'immagine dentro la table */
+.class-avatar{
+    height: 30px;
+    width: 30px;
+}
+/* id per il colore delle azioni nella table */
+#gray{
+    border: 1px solid gray;
+    color: gray;
+}
