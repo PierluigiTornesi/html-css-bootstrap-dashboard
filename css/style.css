@@ -73,7 +73,7 @@ main{
 .content{
     width: calc(100% - var(--lar-sidebar));
     overflow-y: auto;
-    background-color: cyan;
+    background-color: #f8f9fa;
 }
 /* classe per il blocco superiore del main */
 .breadcumb{
@@ -98,6 +98,7 @@ main{
 .titolo{
     padding: 1rem;
     border-bottom: 1px solid lightgray;
+    background-color: #f7f7f7;
 }
 /* classe per lo stato della classe nella table */
 .state{
