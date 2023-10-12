@@ -114,3 +114,22 @@ main{
     border: 1px solid gray;
     color: gray;
 }
+
+/* classe della risposta */
+.risposta{
+    display: none;
+}
+/* classe per rendere visibile la risposta al click */
+.blocco-domanda:active .risposta{
+    display: block;
+}
+/* classe per far colorare il bordo */
+.blocco-domanda:active .domanda{
+    border: 2px solid  #165bba;
+    background-color: lightblue;
+    color: #1b72e8;
+}
+/* classe per far ruotare il simbolo */
+.blocco-domanda:active .simbolo-risposta{
+    rotate: 180deg;
+}
